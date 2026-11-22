@@ -143,21 +143,16 @@ section[id], li[id] { scroll-margin-top: 1.5rem; }
 .record-links { overflow-wrap: anywhere; }
 .record-note { display: block; font-size: 0.9375rem; color: var(--plum); }
 .manuscript-description {
-  position: relative;
-  margin-top: 0.45rem;
-  padding-inline-start: 1.1rem;
+  margin: 0.65rem 0 0.25rem 0.75rem;
+  padding-inline-start: 0.75rem;
+  border-inline-start: 2px solid var(--burgundy);
   color: var(--plum);
 }
 
-.manuscript-description::before {
-  content: "";
-  position: absolute;
-  inset-block-start: 0.7em;
-  inset-inline-start: 0.1rem;
-  width: 0.32em;
-  height: 0.32em;
-  border-radius: 50%;
-  background: currentColor;
+.manuscript-description strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.9375rem;
 }
 .related-list > li + li, .service-list > li + li { margin-top: 0.35rem; }
 .profile-links { margin-top: 1rem; }
@@ -173,10 +168,7 @@ section[id], li[id] { scroll-margin-top: 1.5rem; }
 }
 
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem 1rem;
+  text-align: end;
   padding-block: 1.25rem;
 }
 
