@@ -149,11 +149,6 @@ section[id], li[id] { scroll-margin-top: 1.5rem; }
   color: var(--plum);
 }
 
-.manuscript-description strong {
-  display: block;
-  margin-bottom: 0.15rem;
-  font-size: 0.9375rem;
-}
 .related-list > li + li, .service-list > li + li { margin-top: 0.35rem; }
 .profile-links { margin-top: 1rem; }
 .ruled > h3 { margin-top: 1.65rem; }
