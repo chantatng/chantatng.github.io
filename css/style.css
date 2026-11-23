@@ -185,3 +185,49 @@ section[id], li[id] { scroll-margin-top: 1.5rem; }
 @media (max-width: 23rem) {
   :root { scroll-padding-top: 12rem; }
 }
+
+@media print {
+  @page { margin: 12mm; }
+
+  :root {
+    --ivory: #fff;
+    --charcoal: #000;
+    --plum: #000;
+    --burgundy: #555;
+    --divider: #aaa;
+  }
+
+  nav, .skip-link, .site-footer, body:has(.home-intro) .site-header { display: none; }
+  body { font-size: 11pt; line-height: 1.3; }
+  .site-header { position: static; }
+  .reading-width, .header-inner { width: auto; }
+  .header-inner { min-height: 0; padding-block: 0 6pt; }
+  .wordmark { font-size: 13pt; }
+  main { padding-block: 8pt 0; }
+  .ruled { margin-top: 10pt; padding-top: 7pt; }
+  .ruled > h3 { margin-top: 8pt; }
+  .ruled > h3 + p, .ruled > h3 + ul { margin-top: 4pt; }
+  .section-link { margin-top: 8pt; }
+
+  h1 { font-size: 23pt; }
+  h2 { font-size: 16pt; }
+  h3, .theme-list h3 { font-size: 12pt; }
+  h1, h2, h3, p:has(+ .entry-description) { break-after: avoid; }
+
+  .record-list { font-size: inherit; margin-top: 7pt; }
+  .record-list > li + li { margin-top: 5pt; }
+  .record-list > li { break-inside: avoid; }
+  .entry-description { margin-block: 4pt 2pt; }
+  li, p { orphans: 3; widows: 3; }
+  .profile-links { display: block; }
+  .profile-links > li + li { margin-top: 3pt; }
+
+  a, a:visited { color: #000; text-decoration: none; }
+  .url-label { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
+  main a[href^="http"]:not(.url-label)::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-weight: normal;
+    overflow-wrap: anywhere;
+  }
+}
